@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.demo.entity.User;
 import com.example.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,22 +11,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Service
-public class UserService {
+public class UserService extends ServiceImpl<UserMapper, User> {
+    public boolean saveUser(User user) {
+//        if (user.getId() == null){
+//            return save(user); //mp自带的保存
+//        }else{
+//            return updateById(user); //通过id进行更新
+//        }
+
+        return saveOrUpdate(user);
+    }
+
+    /*
+
     @Autowired
     UserMapper userMapper;
 
 
-    public int save(User user){
-
-        System.out.println(user.toString());
-        //id是自增的，一般不需要进行设置，除非是想通过id更新某个数据
-        if (user.getId() == null){
-            return userMapper.save(user);
-        }else{
-            return userMapper.update(user);
-        }
-
-    }
+//    public int save(User user){
+//
+//        System.out.println(user.toString());
+//        //id是自增的，一般不需要进行设置，除非是想通过id更新某个数据
+//        if (user.getId() == null){
+//            return userMapper.save(user);
+//        }else{
+//            return userMapper.update(user);
+//        }
+//
+//    }
 
 
     public List<User> findAll() {
@@ -68,4 +81,8 @@ public class UserService {
     public List<User> searchPageByUsernameAndEmail(Integer pageNum, Integer pageSize, String username, String email) {
         return userMapper.findPageByUsernameAndEmail(pageNum,pageSize,username,email);
     }
+
+
+     */
+
 }

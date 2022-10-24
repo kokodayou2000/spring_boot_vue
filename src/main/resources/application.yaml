@@ -8,6 +8,10 @@ server:
   port: 8081
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+#  当使用mp的时候，就需要使用mp自带的日志记录放松
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 

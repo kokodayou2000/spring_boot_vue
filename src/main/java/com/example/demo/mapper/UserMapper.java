@@ -1,6 +1,7 @@
 package com.example.demo.mapper;
 
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.demo.entity.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -9,10 +10,11 @@ import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
-@Mapper
-public interface UserMapper {
+//@Mapper
 
+public interface UserMapper extends BaseMapper<User> {
 
+/*
     List<User> findAll();
 
     Integer save(User user);
@@ -34,4 +36,8 @@ public interface UserMapper {
     Integer selectTotalByUsernameAndEmail(String username, String email);
 
     List<User> findPageByUsernameAndEmail(Integer pageNum, Integer pageSize, String username, String email);
+
+ */
+
 }
+

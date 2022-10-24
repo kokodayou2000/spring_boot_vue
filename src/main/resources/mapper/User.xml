@@ -62,4 +62,5 @@
     <delete id="deleteById" parameterType="java.lang.Integer">
             delete from sys_user where id = #{id}
     </delete>
+
 </mapper>

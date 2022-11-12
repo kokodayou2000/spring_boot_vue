@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 //将接口注入到容器中
+//也可以在 mapper/UserMapper加上 @Mapper注解，效果是一样的
 @MapperScan("com.example.demo.mapper")
 public class MybatisPlusConfig {
 

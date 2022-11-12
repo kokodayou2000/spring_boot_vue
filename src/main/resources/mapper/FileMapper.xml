@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.FileMapper">
+
+    <select id="getOne" resultType="java.lang.Integer">
+        SELECT COUNT(id) FROM sys_user WHERE create_time BETWEEN '2022-01-01' AND '2022-02-28';
+    </select>
+    <select id="getTwo" resultType="java.lang.Integer">
+        SELECT COUNT(id) FROM sys_user WHERE create_time BETWEEN '2022-03-01' AND '2022-05-31';
+    </select>
+    <select id="getThree" resultType="java.lang.Integer">
+        SELECT COUNT(id) FROM sys_user WHERE create_time BETWEEN '2022-06-01' AND '2022-08-31';
+    </select>
+    <select id="getFour" resultType="java.lang.Integer">
+        SELECT COUNT(id) FROM sys_user WHERE create_time BETWEEN '2022-09-01' AND '2022-12-31';
+    </select>
+
+</mapper>

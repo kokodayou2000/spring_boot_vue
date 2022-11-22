@@ -28,7 +28,7 @@ public class CodeGenerator {
                 .strategyConfig(builder -> {
                     builder.entityBuilder().enableLombok(); //使用lombok 放弃 getter setter
 //                    builder.mapperBuilder().enableMapperAnnotation().build(); //添加mapper注解，但是我们的MybatisPlushConfig上添加了 @MapperScan(path)就不需要添加了
-                    builder.addInclude("sys_menu") // 设置需要生成的表名
+                    builder.addInclude("sys_role_menu") // 设置需要生成的表名
                             .addTablePrefix("t_", "sys_"); // 设置过滤表前缀
                     builder.controllerBuilder().enableHyphenStyle()  //将 sys_user 转化成为 sysUser
                             .enableRestStyle(); //将Controller转换为 RestController

@@ -14,7 +14,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(getJwtInterceptor())
                 .addPathPatterns("/**") //拦截所有的请求，通过判断Token是否合法 来决定是否登录
-                .excludePathPatterns("/user/login","/user/register","/**/import","/**/export","/file/**","/echarts/**","/role/**","/menu/**");
+                .excludePathPatterns("/user/login","/user/register","/**/import","/**/export","/file/**","/echarts/**","/role/**","/menu/**","/dict/**","/roleMenu/**");
     }
 
     //将对象注册到容器中，如果直接new 就无法注入到容器了，JwtInterceptor中的UserService类就无法被注入

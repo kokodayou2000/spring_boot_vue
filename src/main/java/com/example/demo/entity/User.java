@@ -62,4 +62,7 @@ public class User implements Serializable {
       //自动转换对应数据库中的 avatar_url
       @ApiModelProperty("头像")
       private String avatarUrl;
+
+      @ApiModelProperty("角色")
+      private String role;
 }

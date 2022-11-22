@@ -53,8 +53,6 @@ public class UserController {
             //当出现异常的时候，就直接返回了
             UserDTO userDto = userService.login(userDTO);
 
-
-            System.out.println("执行了嘛？");
             return Result.success(userDto);
         }
     }
